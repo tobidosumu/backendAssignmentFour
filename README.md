@@ -6,4 +6,4 @@
     4. bags
     5. hairstyle
 
-#### Question 3.b. Create a get and return whatever you like
+#### Question 3.b. Create a GET and return whatever you like
