@@ -8,7 +8,7 @@ import bagsRoutes from './routes/bags.js'
 import hairstylesRoutes from './routes/hairstyles.js'
 
 const app = express()
-const PORT = 5000
+const PORT = 7000
 
 app.use(bodyParser.json())
 
@@ -16,13 +16,13 @@ app.use('/users', usersRoutes)
 app.use('/clothes', clothesRoutes)
 app.use('/shoes', shoesRoutes)
 app.use('/bags', bagsRoutes)
-app.use('/hairstyle', hairstylesRoutes)
+app.use('/hairstyles', hairstylesRoutes)
 
 app.get('/', (req, res) => {
     res.send(`Welcome to backend assignment four!`)
 })
 
-app.use(express.json({ extended: true }))
+// app.use(express.json({ extended: true }))
 
 // Question 3.b. Create a GET and return whatever you like
 app.get('/ping', (req, res) => {
@@ -34,6 +34,5 @@ app.get('/ping', (req, res) => {
             "Test": 124124
         })
 })
-
 
 app.listen(PORT, () => console.log(`Serve Running on port: http://localhost:${PORT}`))
